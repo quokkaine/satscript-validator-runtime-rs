@@ -42,7 +42,7 @@ contract Roshambo {
         hash(hash(selection) + hash(salt))
     
     function newChallengeFinalized(c: Roshambo.challengeAccepted, selection: str, salt: str): Roshambo.challengeFinalized {
-        assert(checksum(selection, salt) == c.checksum, "invalid p1 selection or salt")
+        assert(checksum(selection, salt) == c.checksum, 'invalid p1 selection or salt')
         {
             checksum: c.checksum,
             p1: c.owner,
